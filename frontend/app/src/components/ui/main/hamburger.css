@@ -1,0 +1,23 @@
+.hamburger-container {
+  padding: 13px;
+}
+
+.hamburger-line {
+  width: 26px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5.56px 0;
+  transition: transform 0.3s ease;
+}
+
+.hamburger-container.active .hamburger-line:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.hamburger-container.active .hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-container.active .hamburger-line:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}

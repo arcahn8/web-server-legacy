@@ -1,0 +1,24 @@
+version: "3.7"
+
+services:
+  front:
+    image: front
+    volumes:
+      - ./frontend/app/:/app/
+    working_dir: /app
+    privileged: true
+    ports:
+      - "3000:3000"
+    command: npm start
+
+  back:
+    image: back
+    volumes:
+      - ./backend/app:/go/src/app
+      - ../media/:/media/
+      - ../storage/:/storage/
+    working_dir: /go/src/app
+    privileged: true
+    ports:
+      - "4000:4000"
+    command: go run main.go

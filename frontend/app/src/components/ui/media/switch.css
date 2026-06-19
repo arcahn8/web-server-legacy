@@ -1,0 +1,56 @@
+.check_to_switch {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-left: 12px;
+  padding: 2px;
+}
+#switch {
+  position: absolute;
+  /* hidden */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.switch_label {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  width: 58px;
+  height: 28px;
+  background: #fff;
+  border: 2px solid #fde68a;
+  border-radius: 25px;
+  transition: 0.2s;
+}
+.switch_label:hover {
+  background: #fcd34dcc;
+}
+.onf_btn {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 25px;
+  background: #fde68a;
+  transition: 0.2s;
+}
+
+/* checking style */
+#switch:checked + .switch_label {
+  background: #fbbf24;
+  border: 2px solid #fbbf24;
+}
+
+#switch:checked + .switch_label:hover {
+  background: #f59e0b;
+}
+
+/* move */
+#switch:checked + .switch_label .onf_btn {
+  left: 34px;
+  background: #fff;
+}
